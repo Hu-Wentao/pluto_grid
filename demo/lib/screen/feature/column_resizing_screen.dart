@@ -58,6 +58,9 @@ class _ColumnResizingScreenState extends State<ColumnResizingScreen> {
       body: PlutoGrid(
         columns: columns,
         rows: rows,
+        onColWidthChanged: (PlutoOnColWidthChangeEvent evt){
+          print("onColWidthChanged: ${evt.column}");
+        },
         onLoaded: (PlutoGridOnLoadedEvent event) {
           stateManager = event.stateManager;
         },

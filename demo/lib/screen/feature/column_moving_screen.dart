@@ -86,6 +86,9 @@ class _ColumnMovingScreenState extends State<ColumnMovingScreen> {
         onChanged: (PlutoGridOnChangedEvent event) {
           print(event);
         },
+        onColMoved: (PlutoGridOnColMovedEvent event){
+          print("onColMoved: $event");
+        },
       ),
     );
   }
